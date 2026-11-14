@@ -50,7 +50,7 @@ export default function Home() {
 
   return (
     <main className="mx-auto max-w-sm px-4 py-8 text-center">
-      <h1 className="font-[family-name:var(--font-press-start)] text-2xl">
+      <h1 className="font-[family-name:var(--font-press-start)] text-2xl text-cream [text-shadow:3px_3px_0_var(--color-flame)]">
         Tic Tac Toe
       </h1>
       <Scoreboard scores={scores} />
@@ -59,7 +59,7 @@ export default function Home() {
       </div>
       <Board squares={squares} disabled={gameOver} onPlay={handlePlay} />
       <button
-        className="cursor-pointer rounded border border-gray-800 px-4 py-2 hover:bg-gray-100"
+        className="cursor-pointer rounded-lg border-2 border-cream bg-ember px-4 py-2 text-night hover:brightness-110"
         onClick={newGame}
       >
         New Game

@@ -1,7 +1,15 @@
 @import "tailwindcss";
 
+@theme {
+  --color-night: #150d14;
+  --color-cream: #fbdcae;
+  --color-ember: #f97a24;
+  --color-flame: #e8502b;
+  --color-moss: #6bbd4f;
+}
+
 body {
   font-family: var(--font-vt323), monospace;
-  background: #ffffff;
-  color: #111111;
+  background: var(--color-night);
+  color: var(--color-cream);
 }
