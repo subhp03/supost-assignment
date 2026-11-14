@@ -12,7 +12,7 @@ const LINES = [
   [2, 4, 6],
 ];
 
-export function calculateWinner(squares: Cell[]): Player | null {
+export function calculateWinner(squares: Cell[]): Cell {
   for (const [a, b, c] of LINES) {
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a];
