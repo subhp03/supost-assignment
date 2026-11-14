@@ -32,6 +32,7 @@ export default function Home() {
     if (newWinner) {
       setScores((s) => ({ ...s, [newWinner]: s[newWinner] + 1 }));
       reward();
+      new Audio("/mixkit-video-game-treasure-2066.wav").play().catch(() => {});
     } else if (isDraw(next)) {
       setScores((s) => ({ ...s, draws: s.draws + 1 }));
     }
@@ -49,7 +50,14 @@ export default function Home() {
   else status = `Next turn: ${xIsNext ? "X" : "O"}`;
 
   return (
-    <main className="mx-auto max-w-sm px-4 py-8 text-center">
+    <main
+      className="mx-auto max-w-sm px-4 py-8 text-center"
+      onClickCapture={(e) => {
+        if ((e.target as HTMLElement).closest("button")) {
+          new Audio("/mixkit-select-click-1109.wav").play().catch(() => {});
+        }
+      }}
+    >
       <h1 className="font-[family-name:var(--font-press-start)] text-2xl text-cream [text-shadow:3px_3px_0_var(--color-flame)]">
         Tic Tac Toe
       </h1>
