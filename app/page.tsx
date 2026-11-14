@@ -50,7 +50,9 @@ export default function Home() {
 
   return (
     <main className="mx-auto max-w-sm px-4 py-8 text-center">
-      <h1 className="text-3xl font-bold">Tic Tac Toe</h1>
+      <h1 className="font-[family-name:var(--font-press-start)] text-2xl">
+        Tic Tac Toe
+      </h1>
       <Scoreboard scores={scores} />
       <div ref={celebrationRef} className="my-4 min-h-7 text-lg">
         {status}
